@@ -5,7 +5,7 @@ function App() {
   const [context, setContext] = useState()
   const [canvas, setCanvas] = useState()
 
-  const mouse = {x: 0, y: 0}
+  const mouse = { x: 0, y: 0 }
 
   function getCanvas() {
     const canv = document.getElementById('drawing')
@@ -31,8 +31,10 @@ function App() {
       canvas.addEventListener(
         'mousemove',
         e => {
-          mouse.x = e.clientX 
-          mouse.y = e.clientY 
+          const rect = canvas.getBoundingClientRect()
+
+          mouse.x = e.clientX - rect.left
+          mouse.y = e.clientY - rect.top
         },
         false
       )
@@ -67,7 +69,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Paint</h1>
+      <h1>Paintin' Bois</h1>
       <div id="paint">
         <canvas
           id="drawing"
@@ -77,11 +79,6 @@ function App() {
         ></canvas>
       </div>
       {canvas && <div>Canvas Created!</div>}
-      {mouse && (
-        <div>
-          {mouse.x} - {mouse.y}
-        </div>
-      )}
       <button onClick={getCanvas}>create</button>
     </div>
   )
