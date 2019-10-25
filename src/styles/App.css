@@ -1,3 +1,13 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+#paint {
+  width: 500px;
+  height: 500px;
+  border: solid;
+  border-width: thin;
 }
