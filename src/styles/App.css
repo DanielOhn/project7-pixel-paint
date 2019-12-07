@@ -26,6 +26,7 @@
 .colors {
   display: flex;
   flex-flow: column wrap;
+  align-items: center;
 }
 
 .button-list {
@@ -38,4 +39,18 @@
   width: 5px;
   height: 2vh;
   /* background-color: red; */
+}
+
+.marker {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.marker button {
+  border-radius: 70%;
+  border: 0;
+  border-color: black;
+  padding: 0;
+  margin-right: 5px;
 }

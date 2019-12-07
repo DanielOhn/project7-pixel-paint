@@ -78,11 +78,10 @@ function App() {
   }
 
   // selection
-  
 
   return (
     <div className="App">
-      <h1>Paintin' Bois</h1>
+      <h1>Paintin'</h1>
       <div className="content">
         <div id="paint">
           <canvas
@@ -95,28 +94,40 @@ function App() {
         <div className="colors">
           <h2>Colors</h2>
           <div className="button-list">
-          <button
-            style={{ backgroundColor: '#00CC99' }}
-            onClick={() => changeColor('#00CC99')}
-          />
-          <button
-            style={{ backgroundColor: '#000' }}
-            onClick={() => changeColor('#000')}
-          />
-          <button
-            style={{ backgroundColor: '#FFF' }}
-            onClick={() => changeColor('#FFF')}
-          />
-          <button onClick={() => changeEraser()} />
+            <button
+              style={{ backgroundColor: '#00CC99' }}
+              onClick={() => changeColor('#00CC99')}
+            />
+            <button
+              style={{ backgroundColor: '#000' }}
+              onClick={() => changeColor('#000')}
+            />
+            <button
+              style={{ backgroundColor: '#FFF' }}
+              onClick={() => changeColor('#FFF')}
+            />
+            <button onClick={() => changeEraser()} />
+          </div>
+          <h2>Size</h2>
+          <div className="marker">
+            <button
+              style={{ height: '10px', width: '10px' }}
+              onClick={() => changeSize(10)}
+            />
+            <button
+              style={{ height: '14px', width: '14px' }}
+              onClick={() => changeSize(14)}
+            />
+            <button
+              style={{ height: '18px', width: '18px' }}
+              onClick={() => changeSize(18)}
+            />
+            <button
+              style={{ height: '22px', width: '22px' }}
+              onClick={() => changeSize(22)}
+            />
           </div>
         </div>
-      </div>
-      <div>
-        <h2>Marker Size</h2>
-        <button onClick={() => changeSize(6)}>6px</button>
-        <button onClick={() => changeSize(12)}>12px</button>
-        <button onClick={() => changeSize(18)}>18px</button>
-        <button onClick={() => changeSize(24)}>24px</button>
       </div>
     </div>
   )
