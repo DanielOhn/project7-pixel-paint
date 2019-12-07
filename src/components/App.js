@@ -91,41 +91,48 @@ function App() {
             onMouseUp={mouseUp}
           ></canvas>
         </div>
+
         <div className="colors">
-          <h2>Colors</h2>
-          <div className="button-list">
-            <button
-              style={{ backgroundColor: '#00CC99' }}
-              onClick={() => changeColor('#00CC99')}
-            />
-            <button
-              style={{ backgroundColor: '#000' }}
-              onClick={() => changeColor('#000')}
-            />
-            <button
-              style={{ backgroundColor: '#FFF' }}
-              onClick={() => changeColor('#FFF')}
-            />
-            <button onClick={() => changeEraser()} />
+          <div className="color-section">
+            <h2>Colors</h2>
+            <div className="button-list">
+              <button
+                style={{ backgroundColor: '#00CC99' }}
+                onClick={() => changeColor('#00CC99')}
+              />
+              <button
+                style={{ backgroundColor: '#000' }}
+                onClick={() => changeColor('#000')}
+              />
+              <button
+                style={{ backgroundColor: '#FFF' }}
+                onClick={() => changeColor('#FFF')}
+              />
+              <button onClick={() => changeEraser()} />
+            </div>
           </div>
-          <h2>Size</h2>
-          <div className="marker">
-            <button
-              style={{ height: '10px', width: '10px' }}
-              onClick={() => changeSize(10)}
-            />
-            <button
-              style={{ height: '14px', width: '14px' }}
-              onClick={() => changeSize(14)}
-            />
-            <button
-              style={{ height: '18px', width: '18px' }}
-              onClick={() => changeSize(18)}
-            />
-            <button
-              style={{ height: '22px', width: '22px' }}
-              onClick={() => changeSize(22)}
-            />
+
+          <div className="marker-section">
+            <h2>Size</h2>
+            <div className="markers">
+              <button
+                // className={ active ? 'active' : null}
+                style={{ height: '10px', width: '10px', borderColor: 'green', border: '1' }}
+                onClick={() => changeSize(10)}
+              />
+              <button
+                style={{ height: '14px', width: '14px' }}
+                onClick={() => changeSize(14)}
+              />
+              <button
+                style={{ height: '18px', width: '18px' }}
+                onClick={() => changeSize(18)}
+              />
+              <button
+                style={{ height: '22px', width: '22px' }}
+                onClick={() => changeSize(22)}
+              />
+            </div>
           </div>
         </div>
       </div>
